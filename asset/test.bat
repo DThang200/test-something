@@ -1,3 +1,3 @@
 @echo off
-echo 123
+echo 123456
 pause
