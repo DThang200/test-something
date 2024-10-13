@@ -2,15 +2,13 @@
 
 :: Check file ton tai va copy
 
-set file_path="%USERPROFILE%\Desktop\DEMo\text1.txt"
+set file_path="%USERPROFILE%\Desktop\dow-code\text1.txt"
 set source_file=.\asset\text1.txt
-set target_directory=%USERPROFILE%\Desktop\DEMo
+set target_directory=%USERPROFILE%\Desktop\dow-code
 
 if exist %file_path% (
     echo File %file_path% da ton tai.
 ) else (
-
-
     :: Echo ra cac bien
     echo Source file: %source_file%
     echo Target directory: %target_directory%
