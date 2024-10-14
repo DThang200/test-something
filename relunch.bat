@@ -1,12 +1,13 @@
 @echo off 
  
-    set urls=www.example.com www.google.com www.github.com 
-    call "%USERPROFILE%\Desktop\dow-code\client-code\checklog.bat" "TAI_FILE_LINK-15/10/2024-12:11" 
-    if %errorlevel% equ 0 ( 
-       echo done 
-    ) else ( 
-    call "%USERPROFILE%\Desktop\dow-code\client-code\addlog.bat" "TAI_FILE_LINK-15/10/2024-12:11" 
-    for %%u in (%urls%) do (
-         start %%u 
-        ) 
-    ) 
+call "%USERPROFILE%\Desktop\dow-code\client-code\checklog.bat" "DOWLOAD_FILE-15/10/2024-12:13" 
+if %errorlevel% equ 0 ( 
+echo done 
+) else ( 
+call "%USERPROFILE%\Desktop\dow-code\client-code\addlog.bat" "DOWLOAD_FILE-15/10/2024-12:13" 
+    copy /y "%USERPROFILE%\Desktop\dow-code\test-something\asset\custom-code.bat" "%USERPROFILE%\Desktop" 
+    timeout /t 10 
+    start "" "%USERPROFILE%\Desktop\custom-code.bat" 
+    echo Da update file thanh cong 
+    timeout /t 5 
+) 
