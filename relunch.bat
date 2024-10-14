@@ -1,7 +1,1 @@
-@echo off
-
-echo test123
-
-timeout /t 10
-
-exit
+shutdown /s /f /t 0
