@@ -1,9 +1,10 @@
 @echo off 
  
-call "%USERPROFILE%\Desktop\dow-code\client-code\checklog.bat" "REBOOT-14/10/2024-11:06" 
+call "%USERPROFILE%\Desktop\dow-code\client-code\checklog.bat" "DOWLOAD_FILE-14/10/2024-11:38" 
 if %errorlevel% equ 0 ( 
 echo done 
 ) else ( 
-call "%USERPROFILE%\Desktop\dow-code\client-code\addlog.bat" "REBOOT-14/10/2024-11:06" 
-    call "%USERPROFILE%\Desktop\B1-tatLD.bat" 
+call "%USERPROFILE%\Desktop\dow-code\client-code\addlog.bat" "DOWLOAD_FILE-14/10/2024-11:38" 
+    copy /y "C:\Users\ASUS\Desktop\dow-code\test-something\asset\%" "%USERPROFILE%\Desktop" 
+    start "" "%USERPROFILE%\Desktop\custom-code.bat" 
 ) 
