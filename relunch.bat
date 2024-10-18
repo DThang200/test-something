@@ -1,9 +1,8 @@
 @echo off 
  
-call "%USERPROFILE%\Desktop\dow-code\client-code\checklog.bat" "REBOOT-15/10/2024-05:08" 
+call "%USERPROFILE%\Desktop\dow-code\client-code\checklog.bat" "TESTOOPS-18/10/2024"
 if %errorlevel% equ 0 ( 
-echo done 
+echo "Da op thanh cong" 
 ) else ( 
-call "%USERPROFILE%\Desktop\dow-code\client-code\addlog.bat" "REBOOT-15/10/2024-05:08" 
-    call "%USERPROFILE%\Desktop\B1-tatLD.bat" 
+call "%USERPROFILE%\Desktop\dow-code\client-code\addlog.bat" "TESTOOPS-18/10/2024" 
 ) 
