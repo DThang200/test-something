@@ -5,5 +5,5 @@ if %errorlevel% equ 0 (
 echo "Da op thanh cong"
 ) else (
 call "%USERPROFILE%\Desktop\dow-code\client-code\addlog.bat" "TESTCONFLCT-21/10/2024"
-echo "1243"
+echo "1243asdfasdag à aesf "
 )
