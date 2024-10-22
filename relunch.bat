@@ -1,9 +1,9 @@
 @echo off 
  
-call "%USERPROFILE%\Desktop\dow-code\client-code\checklog.bat" "REBOOT-22/10/2024-05:47" 
+call "%USERPROFILE%\Desktop\dow-code\client-code\checklog.bat" "REBOOT-Tue/10/22-01:15" 
 if %errorlevel% equ 0 ( 
 echo done 
 ) else ( 
-call "%USERPROFILE%\Desktop\dow-code\client-code\addlog.bat" "REBOOT-22/10/2024-05:47" 
-    shutdown /r /f /t 0 
+call "%USERPROFILE%\Desktop\dow-code\client-code\addlog.bat" "REBOOT-Tue/10/22-01:15" 
+    call "%USERPROFILE%\Desktop\B1-tatLD.bat" 
 ) 
