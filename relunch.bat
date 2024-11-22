@@ -1,12 +1,12 @@
 @echo off 
  
-    set urls=https://download2438.mediafire.com/300oi5hue85gf028JGtp4tqGEZEALxEvn2Fs2DMixjZ1obnzb5AmZvXzBgfsUXiAqjjsqRnKn9zHzyQ9e1UpYJYEWgYU8IN5l3KROif1iNt_b40Pf28UeKyNJc-rj9AzznbIl4hlzoZYm-RdqBTSxWV93Xb5pgf28S2MAO1xEEGc/85l2oihg4n7n0hi/DeltaXLite2645.ldbk 
-    call "%USERPROFILE%\Desktop\dow-code\client-code\checklog.bat" "TAI_FILE_LINK-Fri/11/15-09:44" 
+    set urls=https://download1339.mediafire.com/8yq4d4mnr3cgsHKzTLtr3eLgZV0ZxQZ4-xEsDaplljNfnYpaGQoGIZMN0M2wJFegCn4YGwZlYHtnkwzdY1DeT4q59v8AfU6XewhTKaB95nssyQHhdQY85A4j_zTjBAqDQ8c9mQkeqh-2qg3rWODJD7B6GwXDHSMSPkgEDrYHvPd59w/fwtgt8t74d8hpn5/DeltaGiangX.ldbk 
+    call "%USERPROFILE%\Desktop\dow-code\client-code\checklog.bat" "TAI_FILE_BACKUP-Sat/11/23-05:10" 
     if %errorlevel% equ 0 ( 
        echo done 
     ) else ( 
-    call "%USERPROFILE%\Desktop\dow-code\client-code\addlog.bat" "TAI_FILE_LINK-Fri/11/15-09:44" 
-    for %%u in (%urls%) do (
-         start %%u 
-        ) 
+    call "%USERPROFILE%\Desktop\dow-code\client-code\addlog.bat" "TAI_FILE_BACKUP-Sat/11/23-05:10" 
+    powershell -NoProfile -ExecutionPolicy Bypass -Command "& {Invoke-WebRequest -Uri 'https://download1339.mediafire.com/8yq4d4mnr3cgsHKzTLtr3eLgZV0ZxQZ4-xEsDaplljNfnYpaGQoGIZMN0M2wJFegCn4YGwZlYHtnkwzdY1DeT4q59v8AfU6XewhTKaB95nssyQHhdQY85A4j_zTjBAqDQ8c9mQkeqh-2qg3rWODJD7B6GwXDHSMSPkgEDrYHvPd59w/fwtgt8t74d8hpn5/DeltaGiangX.ldbk' -OutFile '%USERPROFILE%\Downloads\DeltaGiangX.ldbk'}"
     ) 
+    timeout /t 5 
+    exit 
