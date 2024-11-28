@@ -1,10 +1,9 @@
 @echo off 
  
-call "%USERPROFILE%\Desktop\dow-code\client-code\checklog.bat" "BACKUP-Thu/11/28-03:00" 
+call "%USERPROFILE%\Desktop\dow-code\client-code\checklog.bat" "REBOOT-Fri/11/29-01:52" 
 if %errorlevel% equ 0 ( 
 echo done 
 ) else ( 
-call "%USERPROFILE%\Desktop\dow-code\client-code\addlog.bat" "BACKUP-Thu/11/28-03:00" 
-    cd "%USERPROFILE%\Desktop\dow-code"
-    call "%USERPROFILE%\Desktop\dow-code\tat-app.vbs" 
+call "%USERPROFILE%\Desktop\dow-code\client-code\addlog.bat" "REBOOT-Fri/11/29-01:52" 
+    call "%USERPROFILE%\Desktop\B1-tatLD.bat" 
 ) 
