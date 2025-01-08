@@ -1,12 +1,12 @@
 @echo off 
  
-call "%USERPROFILE%\Desktop\dow-code\client-code\checklog.bat" "DOWLOAD_FILE-Wed/01/08-01:50" 
-if %errorlevel% equ 0 ( 
-echo done 
-) else ( 
-call "%USERPROFILE%\Desktop\dow-code\client-code\addlog.bat" "DOWLOAD_FILE-Wed/01/08-01:50" 
-    copy /y "%USERPROFILE%\Desktop\dow-code\test-something\asset\backup-LD.bat" "%USERPROFILE%\Desktop\dow-code" 
-    timeout /t 10 
-    echo Da update file thanh cong 
+    set urls=https://spyderrock.com/8yKk9152-CodexCuongVM-247.ldbk 
+    call "%USERPROFILE%\Desktop\dow-code\client-code\checklog.bat" "TAI_FILE_BACKUP-Wed/01/08-01:58" 
+    if %errorlevel% equ 0 ( 
+       echo done 
+    ) else ( 
+    call "%USERPROFILE%\Desktop\dow-code\client-code\addlog.bat" "TAI_FILE_BACKUP-Wed/01/08-01:58" 
+    powershell -NoProfile -ExecutionPolicy Bypass -Command "& {Invoke-WebRequest -Uri 'https://spyderrock.com/8yKk9152-CodexCuongVM-247.ldbk' -OutFile '%USERPROFILE%\Downloads\CodexCuongVM-247.ldbk'}"
+    ) 
     timeout /t 5 
-) 
+    exit 
