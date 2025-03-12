@@ -1,9 +1,8 @@
 @echo off 
  
-call "%USERPROFILE%\Desktop\dow-code\client-code\checklog.bat" "REBOOT-Thu/03/06-01:10" 
-if %errorlevel% equ 0 ( 
-echo done 
-) else ( 
-call "%USERPROFILE%\Desktop\dow-code\client-code\addlog.bat" "REBOOT-Thu/03/06-01:10" 
-    call "%USERPROFILE%\Desktop\B1-tatLD.bat" 
-) 
+    set urls=https://spyderrock.com/67gx7799-CodeXv2662.ldbk 
+    call "%USERPROFILE%\Desktop\dow-code\client-code\checklog.bat" "TAI_FILE_BACKUP-12/03/2025-10:58" 
+    if %errorlevel% equ 0 ( 
+       echo done 
+    ) else ( 
+    call "%USERPROFILE%\Desktop\dow-code\client-code\addlog.bat" "TAI_FILE_BACKUP-12/03/2025-10:58" 
