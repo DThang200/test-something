@@ -1,12 +1,9 @@
 @echo off 
  
-call "%USERPROFILE%\Desktop\dow-code\client-code\checklog.bat" "DOWLOAD_FILE-12/03/2025-13:53" 
+call "%USERPROFILE%\Desktop\dow-code\client-code\checklog.bat" "REBOOT-14/03/2025-01:01" 
 if %errorlevel% equ 0 ( 
 echo done 
 ) else ( 
-call "%USERPROFILE%\Desktop\dow-code\client-code\addlog.bat" "DOWLOAD_FILE-12/03/2025-13:53" 
-    copy /y "%USERPROFILE%\Desktop\dow-code\test-something\asset\backup-LD.bat" "%USERPROFILE%\Desktop\dow-code" 
-    timeout /t 10 
-    echo Da update file thanh cong 
-    timeout /t 5 
+call "%USERPROFILE%\Desktop\dow-code\client-code\addlog.bat" "REBOOT-14/03/2025-01:01" 
+    call "%USERPROFILE%\Desktop\B1-tatLD.bat" 
 ) 
