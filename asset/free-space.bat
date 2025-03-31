@@ -28,10 +28,14 @@ for /f %%A in ('powershell -command "[math]::Ceiling((Get-CimInstance -ClassName
 )
 set /a UsedRAM=TotalRAM-FreeRAM
 
+
+for /f "tokens=2 delims==" %%a in ('wmic cpu get loadpercentage /value') do set cpuLoad=%%a
+
+
 :: Chuẩn bị nội dung JSON (escape dấu ngoặc kép bằng \")
-set "payload={\"content\":\"%firstLine% - Storage: %freeSpace% GB - RAM : %UsedRAM%(%TotalRAM%) GB\"}"
+set "payload={\"content\":\"%firstLine% - Storage: %freeSpace% GB - RAM : %UsedRAM%(%TotalRAM%) GB - CPU : %cpuLoad% %% \"}"
 
 :: Gửi webhook bằng curl
 curl -H "Content-Type: application/json" -X POST -d "%payload%" "%webhookUrl%"
 
-pause
+exit
