@@ -20,10 +20,18 @@ for /f "usebackq tokens=*" %%f in (`powershell -Command "[math]::Round((Get-PSDr
     set "freeSpace=%%f"
 )
 
+for /f %%A in ('powershell -command "[math]::Ceiling((Get-CimInstance -ClassName Win32_ComputerSystem).TotalPhysicalMemory / 1GB)"') do (
+    set TotalRAM=%%A
+)
+for /f %%A in ('powershell -command "[math]::Ceiling((Get-CimInstance -ClassName Win32_OperatingSystem).FreePhysicalMemory / 1048576)"') do (
+    set FreeRAM=%%A
+)
+set /a UsedRAM=TotalRAM-FreeRAM
+
 :: Chuẩn bị nội dung JSON (escape dấu ngoặc kép bằng \")
-set "payload={\"content\":\"%firstLine% - Free space: %freeSpace% GB\"}"
+set "payload={\"content\":\"%firstLine% - Storage: %freeSpace% GB - RAM : %UsedRAM%(%TotalRAM%) GB\"}"
 
 :: Gửi webhook bằng curl
 curl -H "Content-Type: application/json" -X POST -d "%payload%" "%webhookUrl%"
 
-exit
+pause
