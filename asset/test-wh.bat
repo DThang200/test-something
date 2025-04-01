@@ -4,11 +4,13 @@ setlocal
 :: URL của webhook Discord
 set "webhookUrl=https://discord.com/api/webhooks/1356349218574565476/TZDYxbBlLTPJ1Sx-fafa4qbecW0xYAJn22F0O6Yvy5KF8k1jQerLnG4nwgZTSVBDmJrF"
 
-:: Đường dẫn tới file Buoc3-Dat-ten-PC.txt
-set "filePath=%USERPROFILE%\Desktop\dow-code\Buoc3-Dat-ten-PC.txt"
+
 
 :: Đường dẫn tới file configs.json
 set "configFile=%USERPROFILE%\Desktop\decode\configs.json"
+
+:: Đường dẫn tới file Buoc3-Dat-ten-PC.txt
+set "filePath=%USERPROFILE%\Desktop\dow-code\Buoc3-Dat-ten-PC.txt"
 
 :: Đọc dòng đầu tiên của file Buoc3-Dat-ten-PC.txt
 set "firstLine="
