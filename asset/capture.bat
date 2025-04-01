@@ -1,6 +1,8 @@
 @echo off
 setlocal enableextensions enabledelayedexpansion
 
+cd %USERPROFILE%\Desktop\dow-code\test-something\asset
+
 set "filePath=%USERPROFILE%\Desktop\dow-code\Buoc3-Dat-ten-PC.txt"
 
 set "firstLine="
