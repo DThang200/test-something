@@ -12,9 +12,10 @@ for /f "usebackq delims=" %%a in ("%filePath%") do (
 )
 :break
 
-for /f "tokens=1-3 delims=/ " %%a in ("%date%") do (
-    set "day=%%a"
-    set "month=%%b"
+set "rawDate=%date%"
+for /f "tokens=2-4 delims= " %%a in ("%rawDate%") do (
+    set "month=%%a"
+    set "day=%%b"
     set "year=%%c"
 )
 
