@@ -24,7 +24,7 @@ for /f "tokens=1-3 delims=:" %%a in ("%time%") do (
     set "minute=%%b"
     set "second=%%c"
 )
-set "timestamp=%hour%h - %day%/%month%/%year%"
+set "timestamp=%hour%h_%day%_%month%_%year%"
 
 :: URL webhook Discord của bạn
 set WEBHOOK_URL=https://discord.com/api/webhooks/1356349218574565476/TZDYxbBlLTPJ1Sx-fafa4qbecW0xYAJn22F0O6Yvy5KF8k1jQerLnG4nwgZTSVBDmJrF
