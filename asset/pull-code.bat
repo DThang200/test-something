@@ -7,7 +7,7 @@ set "TARGET_DIR=%USERPROFILE%\Desktop\dow-code\test-something"
 if not exist "%TARGET_DIR%" (
     echo Thu muc khong ton tai, dang clone repository...
     cd "%TARGET_DIR%"
-    git clone "%REPO_URL%"
+    git clone -c http.sslVerify=false "%REPO_URL%"
 ) else (
     echo Thu muc da ton tai, dang pull code...
     cd "%TARGET_DIR%"

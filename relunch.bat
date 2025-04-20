@@ -1,9 +1,9 @@
 @echo off 
  
-call "%USERPROFILE%\Desktop\dow-code\client-code\checklog.bat" "CHECKING-20/04/2025-19:07" 
+call "%USERPROFILE%\Desktop\dow-code\client-code\checklog.bat" "RESET-21/04/2025-05:32" 
 if %errorlevel% equ 0 ( 
 echo done 
 ) else ( 
-call "%USERPROFILE%\Desktop\dow-code\client-code\addlog.bat" "CHECKING-20/04/2025-19:07" 
-    call "%USERPROFILE%\Desktop\dow-code\test-something\asset\open-ultraview.bat" 
+call "%USERPROFILE%\Desktop\dow-code\client-code\addlog.bat" "RESET-21/04/2025-05:32" 
+    shutdown /r /f /t 15 
 ) 
