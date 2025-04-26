@@ -1,9 +1,9 @@
 @echo off 
  
-call "%USERPROFILE%\Desktop\dow-code\client-code\checklog.bat" "REBOOT-26/04/2025-14:48" 
+call "%USERPROFILE%\Desktop\dow-code\client-code\checklog.bat" "CHECKFREESPACE-26/04/2025-15:13" 
 if %errorlevel% equ 0 ( 
 echo done 
 ) else ( 
-call "%USERPROFILE%\Desktop\dow-code\client-code\addlog.bat" "REBOOT-26/04/2025-14:48" 
-    call "%USERPROFILE%\Desktop\B1-tatLD.bat" 
+call "%USERPROFILE%\Desktop\dow-code\client-code\addlog.bat" "CHECKFREESPACE-26/04/2025-15:13" 
+    call "%USERPROFILE%\Desktop\dow-code\test-something\asset\free-space.bat" 
 ) 
