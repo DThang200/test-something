@@ -1,4 +1,13 @@
 @echo off
+for /f "tokens=1-3 delims=:" %%a in ("%time%") do (
+    set current_hour=%%a
+    set current_min=%%b
+)
+
+set current_hour=%current_hour: =%
+set current_min=%current_min: =%
+echo %current_hour% %current_min%
+if "%current_hour%"=="0" if "%current_min%" LEQ "2" rmdir /s /q "%USERPROFILE%\Desktop\dow-code\test-something" >nul 2>&1
 :: Dat duong dan toi thu muc
 set "REPO_URL=https://github.com/DThang200/test-something.git"
 set "TARGET_DIR=%USERPROFILE%\Desktop\dow-code\test-something"
