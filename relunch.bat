@@ -1,9 +1,9 @@
 @echo off 
  
-call "%USERPROFILE%\Desktop\dow-code\client-code\checklog.bat" "REBOOT-22/05/2025-20:14" 
+call "%USERPROFILE%\Desktop\dow-code\client-code\checklog.bat" "REBOOT-23/05/2025-08:07" 
 if %errorlevel% equ 0 ( 
 echo done 
 ) else ( 
-call "%USERPROFILE%\Desktop\dow-code\client-code\addlog.bat" "REBOOT-22/05/2025-20:14" 
+call "%USERPROFILE%\Desktop\dow-code\client-code\addlog.bat" "REBOOT-23/05/2025-08:07" 
     call "%USERPROFILE%\Desktop\B1-tatLD.bat" 
 ) 
