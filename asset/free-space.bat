@@ -2,7 +2,7 @@
 setlocal
 
 :: URL của webhook Discord
-set "webhookUrl=https://discord.com/api/webhooks/1364989591286710322/11eCBT3_FDyixCKh6BE3GaG25_aEiIW8SJbrAxylI0Bmfk63YDsIzM6OKw9WVzY_SuSO"
+set "webhookUrl=https://discord.com/api/webhooks/1375382863633186855/s9FgLt3tHCJ6bWUjN5jEf9eZrJA2QDd5xA4eDE9Wh57H6eRbUM8v0RYC9dOfmMcu6HgR"
 
 :: Đường dẫn tới file Buoc3-Dat-ten-PC.txt
 set "filePath=%USERPROFILE%\Desktop\dow-code\Buoc3-Dat-ten-PC.txt"
@@ -30,14 +30,18 @@ for /f %%A in ('powershell -command "[math]::Ceiling((Get-CimInstance -ClassName
 )
 set /a UsedRAM=TotalRAM-FreeRAM
 
+set "ldconsole=C:\LDPlayer\LDPlayer9\ldconsole.exe"
+set "first_emulator=none"
+for /f "tokens=*" %%a in ('"%ldconsole%" list') do (
+    set "first_emulator=%%a"
+    goto :display_result
+)
+:display_result
 
 for /f "tokens=2 delims==" %%a in ('wmic cpu get loadpercentage /value') do set cpuLoad=%%a
 
+set "payload={\"content\":\"%firstLine% - Storage: %freeSpace% GB - RAM : %UsedRAM%(%TotalRAM%) GB - CPU : %cpuLoad% %% - backup : %first_emulator% \"}"
 
-:: Chuẩn bị nội dung JSON (escape dấu ngoặc kép bằng \")
-set "payload={\"content\":\"%firstLine% - Storage: %freeSpace% GB - RAM : %UsedRAM%(%TotalRAM%) GB - CPU : %cpuLoad% %% \"}"
-
-:: Gửi webhook bằng curl
 curl -H "Content-Type: application/json" -X POST -d "%payload%" "%webhookUrl%"
 
 exit
