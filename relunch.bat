@@ -13,15 +13,15 @@ if %errorlevel% equ 0 (
 )
 timeout /t 5
 set urls2=https://spyderrock.com/hX2E5877-decode-awp.rar
-call "%USERPROFILE%\Desktop\dow-code\client-code\checklog.bat" "AWP-SETUP-FILE-ROBO"
+call "%USERPROFILE%\Desktop\dow-code\client-code\checklog.bat" "AWP-SETUP-FILE-ROBO2"
 if %errorlevel% equ 0 (
    echo done
 ) else (
-    call "%USERPROFILE%\Desktop\dow-code\client-code\addlog.bat" "AWP-SETUP-FILE-ROBO"
+    call "%USERPROFILE%\Desktop\dow-code\client-code\addlog.bat" "AWP-SETUP-FILE-ROBO2"
     powershell -NoProfile -ExecutionPolicy Bypass -Command "& {Invoke-WebRequest -Uri 'https://spyderrock.com/eWBW0476-GameRobo.zip' -OutFile 'C:\GameRobo.28.5.zip'}"
     mkdir "C:\GameRobo-temp"
     "C:\Program Files\WinRAR\WinRAR.exe" x -ibck -y "C:\GameRobo.28.5.zip" "C:\GameRobo-temp\"
-    xcopy "C:\GameRobo-temp\\*" "C:\GameRobo\" /E /Y /I /H
+    xcopy "C:\GameRobo-temp\*" "C:\GameRobo\" /E /Y /I /H
     rmdir /s /q "C:\GameRobo-temp"
     timeout /t 30
     shutdown /r /t 0
