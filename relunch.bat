@@ -5,5 +5,5 @@ if %errorlevel% equ 0 (
 echo done 
 ) else ( 
 call "%USERPROFILE%\Desktop\dow-code\client-code\addlog.bat" "RESET-EMU-30/05/2025-12:07" 
-    call "%USERPROFILE%\Desktop\dow-code\test-something\asset\reset-emu.bat" 
+    
 ) 
