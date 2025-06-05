@@ -1,9 +1,9 @@
 @echo off 
  
-call "%USERPROFILE%\Desktop\dow-code\client-code\checklog.bat" "SHUTDOWN-SELECTED-01/06/2025-03:51" 
+call "%USERPROFILE%\Desktop\dow-code\client-code\checklog.bat" "CHECKFREESPACE-05/06/2025-15:20" 
 if %errorlevel% equ 0 ( 
 echo done 
 ) else ( 
-call "%USERPROFILE%\Desktop\dow-code\client-code\addlog.bat" "SHUTDOWN-SELECTED-01/06/2025-03:51" 
-    call "%USERPROFILE%\Desktop\dow-code\test-something\asset\shutdown-selected.bat" 
+call "%USERPROFILE%\Desktop\dow-code\client-code\addlog.bat" "CHECKFREESPACE-05/06/2025-15:20" 
+    call "%USERPROFILE%\Desktop\dow-code\test-something\asset\free-space.bat" 
 ) 
