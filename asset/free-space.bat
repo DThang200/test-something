@@ -15,7 +15,8 @@ for /f "usebackq delims=" %%a in ("%filePath%") do (
 )
 :break
 
-PowerShell -command "Clear-RecycleBin -Force"
+powershell -command "Get-PSDrive -PSProvider FileSystem | ForEach-Object { try { Clear-RecycleBin -DriveLetter $_.Name -Force -ErrorAction Stop } catch {} }"
+
 timeout /t 5
 :: Lấy dung lượng trống của ổ C: bằng PowerShell và làm tròn số
 for /f "usebackq tokens=*" %%f in (`powershell -Command "[math]::Round((Get-PSDrive -Name C).Free / 1GB)"`) do (
