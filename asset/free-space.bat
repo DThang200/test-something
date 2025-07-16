@@ -39,9 +39,5 @@ for /f "tokens=*" %%a in ('"%ldconsole%" list') do (
 :display_result
 
 for /f "tokens=2 delims==" %%a in ('wmic cpu get loadpercentage /value') do set cpuLoad=%%a
-
-set "payload={\"content\":\"%firstLine% - Storage: %freeSpace% GB - RAM : %UsedRAM%(%TotalRAM%) GB - CPU : %cpuLoad% %% - backup : %first_emulator% \"}"
-
-curl -H "Content-Type: application/json" -X POST -d "%payload%" "%webhookUrl%"
-
+powershell -Command " [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; $payload = '{\"content\":\"%firstLine% - Storage: %freeSpace% GB - RAM : %UsedRAM%(%TotalRAM%) GB - CPU : %cpuLoad%%% - backup : %first_emulator% \"}'; Invoke-RestMethod -Uri '%webhookUrl%' -Method Post -ContentType 'application/json' -Body $payload "
 exit
