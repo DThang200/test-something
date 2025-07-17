@@ -19,7 +19,7 @@ if !errorlevel! equ 0 (
     taskkill /f /im Windows10Universal.exe >nul 2>&1
     shutdown /r /t 0
 ) else (
-    cd "%%USERPROFILE%%\Desktop\dow-code\test-something\asset"
-    call "%%USERPROFILE%%\Desktop\dow-code\test-something\asset\tat-app.vbs"
+    cd "%USERPROFILE%\Desktop\dow-code\test-something\asset"
+    call "%USERPROFILE%\Desktop\dow-code\test-something\asset\tat-app.vbs"
 )
 exit
