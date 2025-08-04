@@ -2,7 +2,7 @@
 setlocal
 
 :: URL của webhook Discord
-set "webhookUrl=https://discord.com/api/webhooks/1398583514672398336/iQV3fwEJWmuThgxzAYx9cENx4tcS3BgBOKlrLlWvZao-hGpTbISCguNsGd7GG-o8fnCJ"
+set "webhookUrl=https://discord.com/api/webhooks/1402019320959340705/T5gQpE_5S5ad6f2VXj3I_XwfvT5iK33Fq6tvKkt-Sf4qshjgOwkoIicZ2U8QGzFn_w0W"
 
 :: Đường dẫn tới file Buoc3-Dat-ten-PC.txt
 set "filePath=%USERPROFILE%\Desktop\dow-code\Buoc3-Dat-ten-PC.txt"
