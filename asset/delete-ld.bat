@@ -4,7 +4,7 @@ timeout /t 3
 cd "C:\LDPlayer\LDPlayer9\"
 set LDCONSOLE="C:\LDPlayer\LDPlayer9\ldconsole.exe"
 %LDCONSOLE% quitall
-timeout /t 5 >nul
+timeout /t 30 >nul
 
 timeout /t 5
 @echo off

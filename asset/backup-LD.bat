@@ -14,7 +14,7 @@ timeout /t 10
 
 cd "C:\LDPlayer\LDPlayer9\"
 
-   ldconsole.exe  restore --index 0 --file "%USERPROFILE%\Downloads\Delta2684.ldbk"
+   ldconsole.exe  restore --index 0 --file "%USERPROFILE%\Downloads\Delta2685.ldbk"
 echo Da backup
 timeout /t 20
 shutdown /r /t 0
