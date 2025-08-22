@@ -3,7 +3,7 @@ setlocal enabledelayedexpansion
 
 :: Ðu?ng d?n t?i ldconsole.exe (s?a n?u b?n cài LDPlayer ? noi khác)
 set LDCONSOLE="C:\LDPlayer\LDPlayer9\ldconsole.exe"
-set RAM_MB=1536
+set RAM_MB=2048
 set MAX_TAB=49
 
 echo -------------------------------
