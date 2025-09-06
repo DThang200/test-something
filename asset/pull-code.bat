@@ -1,14 +1,21 @@
 @echo off
-for /f "tokens=1-3 delims=:" %%a in ("%time%") do (
-    set current_hour=%%a
-    set current_min=%%b
-)
 
-set current_hour=%current_hour: =%
-set current_min=%current_min: =%
-echo %current_hour% %current_min%
-if "%current_hour%"=="0" if "%current_min%" LEQ "2" rmdir /s /q "%USERPROFILE%\Desktop\dow-code\test-something" >nul 2>&1
-:: Dat duong dan toi thu muc
+for /f "usebackq tokens=*" %%f in (`powershell -Command "[math]::Round((Get-PSDrive -Name C).Free / 1GB)"`) do (
+    set "freeSpace=%%f"
+)
+if %freeSpace% lss 10 (
+	"C:\LDPlayer\LDPlayer9\ldconsole.exe" quitall
+	timeout /t 5
+	@echo off
+	for /l %%i in (1,1,50) do (
+		"C:\LDPlayer\LDPlayer9\ldconsole.exe" remove --index %%i
+		echo Iteration %%i
+   	)
+	echo [] >"%USERPROFILE%\Desktop\decode\data\emulators.json"
+	
+) else (
+	echo Dung luong van on.
+)
 set "REPO_URL=https://github.com/DThang200/test-something.git"
 set "TARGET_DIR=%USERPROFILE%\Desktop\dow-code\test-something"
 
@@ -16,12 +23,10 @@ set "TARGET_DIR=%USERPROFILE%\Desktop\dow-code\test-something"
 if not exist "%TARGET_DIR%" (
     echo Thu muc khong ton tai, dang clone repository...
     cd "%TARGET_DIR%"
-    git clone -c http.sslVerify=false "%REPO_URL%"
+    git clone "%REPO_URL%"
 ) else (
     echo Thu muc da ton tai, dang pull code...
     cd "%TARGET_DIR%"
-    git reset --hard
-    git clean -fd
     git pull
 )
 
