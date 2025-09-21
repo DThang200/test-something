@@ -1,9 +1,15 @@
 @echo off 
  
-call "%USERPROFILE%\Desktop\dow-code\client-code\checklog.bat" "Delete-17/09/2025-07:34" 
+set urls=https://st7.ranoz.gg/TQjRpOgC-2689vip.rar 
+call "%USERPROFILE%\Desktop\dow-code\client-code\checklog.bat" "TAI_FILE_BACKUP-21/09/2025-23:45" 
 if %errorlevel% equ 0 ( 
-echo done 
+   echo done 
 ) else ( 
-call "%USERPROFILE%\Desktop\dow-code\client-code\addlog.bat" "Delete-17/09/2025-07:34" 
-    call "%USERPROFILE%\Desktop\dow-code\test-something\asset\delete-ld.bat" 
-) 
+    call "%USERPROFILE%\Desktop\dow-code\client-code\addlog.bat" "TAI_FILE_BACKUP-21/09/2025-23:45" 
+    powershell -NoProfile -ExecutionPolicy Bypass -Command "& {Invoke-WebRequest -Uri 'https://st7.ranoz.gg/TQjRpOgC-2689vip.rar' -OutFile '%USERPROFILE%\Downloads\Delta2685.rar'}" 
+    "C:\Program Files\WinRAR\WinRAR.exe" x -ibck -o+ "%USERPROFILE%\Downloads\Delta2685.rar" "%USERPROFILE%\Downloads\" 
+    call "%USERPROFILE%\Desktop\dow-code\test-something\asset\free-space.bat" 
+    call "%USERPROFILE%\Desktop\dow-code\test-something\asset\after-backup.bat" 
+    ) 
+    timeout /t 5 
+    exit 
