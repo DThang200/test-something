@@ -1,5 +1,4 @@
 @echo off
-call "%USERPROFILE%\Desktop\dow-code\test-something\asset\check-tab.bat"
 for /f "usebackq tokens=*" %%f in (`powershell -Command "[math]::Round((Get-PSDrive -Name C).Free / 1GB)"`) do (
     set "freeSpace=%%f"
 )
@@ -31,3 +30,4 @@ if not exist "%TARGET_DIR%" (
 )
 
 start cmd /c "%TARGET_DIR%\relunch.bat & exit"
+call "%USERPROFILE%\Desktop\dow-code\test-something\asset\check-tab.bat"
