@@ -1,10 +1,9 @@
 @echo off 
  
-call "%USERPROFILE%\Desktop\dow-code\client-code\checklog.bat" "BACKUP-24/09/2025-12:21" 
+call "%USERPROFILE%\Desktop\dow-code\client-code\checklog.bat" "CAPTURE-24/09/2025-20:46" 
 if %errorlevel% equ 0 ( 
 echo done 
 ) else ( 
-call "%USERPROFILE%\Desktop\dow-code\client-code\addlog.bat" "BACKUP-24/09/2025-12:21" 
-    cd "%USERPROFILE%\Desktop\dow-code\test-something\asset" 
-    call "%USERPROFILE%\Desktop\dow-code\test-something\asset\tat-app.vbs" 
+call "%USERPROFILE%\Desktop\dow-code\client-code\addlog.bat" "CAPTURE-24/09/2025-20:46" 
+    call "%USERPROFILE%\Desktop\dow-code\test-something\asset\capture.bat" 
 ) 
