@@ -1,6 +1,6 @@
 @echo off
 setlocal EnableExtensions EnableDelayedExpansion
-copy /y "%USERPROFILE%\Desktop\dow-code\test-something\asset\leidians.config" "C:\LDPlayer\LDPlayer9\vms\config"
+copy /y "%USERPROFILE%\Desktop\dow-code\test-something\asset\leidians.config" "C:\LDPlayer\LDPlayer9\vms\config\"
 :: ===== SETTINGS (LDPlayer 9) =====
 set "LDROOT=C:\LDPlayer\LDPlayer9"
 set "VMBASE=%LDROOT%\vms"
