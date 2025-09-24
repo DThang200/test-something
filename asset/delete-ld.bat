@@ -27,6 +27,7 @@ for /d %%D in ("%DIR%\leidian*") do (
     rd /s /q "%%~fD" 2>nul
   )
 )
+echo [] >"%USERPROFILE%\Desktop\decode\data\emulators.json"
 
 echo Done.
 
