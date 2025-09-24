@@ -13,20 +13,21 @@ set "DELIDX="
 for %%F in ("%CFGDIR%\leidian*.config") do (
   set "name=%%~nF"          & rem e.g. leidian12
   set "idx=!name:leidian=!" & rem -> 12
-  if not "!idx!"=="0" (
-    if not "!idx!"=="s"(
-    set "cpu="
-    for /f "usebackq delims=" %%C in (`
-      powershell -NoP -C ^
-        "$t=Get-Content -Raw '%%~fF';" ^
-        "if($t -match '\"advancedSettings\.cpuCount\"\s*:\s*(\d+)'){ $matches[1] }"
-    `) do set "cpu=%%C"
 
-    if not defined cpu (
-      call :CloseAndDelete "!idx!"
-    ) else (
-      if "!cpu!"=="4" call :CloseAndDelete "!idx!"
-    )
+  if not "!idx!"=="0" (
+    if /I not "!idx!"=="s" (  rem <== nhớ có khoảng trắng trước "("
+      set "cpu="
+      for /f "usebackq delims=" %%C in (`
+        powershell -NoProfile -Command ^
+          "$t = Get-Content -Raw '%%~fF';" ^
+          "if ($t -match '\"advancedSettings\.cpuCount\"\s*:\s*(\d+)') { $matches[1] }"
+      `) do set "cpu=%%C"
+
+      if not defined cpu (
+        call :CloseAndDelete "!idx!"
+      ) else (
+        if "!cpu!"=="4" call :CloseAndDelete "!idx!"
+      )
     )
   )
 )
