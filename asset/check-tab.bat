@@ -14,6 +14,7 @@ for %%F in ("%CFGDIR%\leidian*.config") do (
   set "name=%%~nF"          & rem e.g. leidian12
   set "idx=!name:leidian=!" & rem -> 12
   if not "!idx!"=="0" (
+    if not "!idx!"=="s"(
     set "cpu="
     for /f "usebackq delims=" %%C in (`
       powershell -NoP -C ^
@@ -25,6 +26,7 @@ for %%F in ("%CFGDIR%\leidian*.config") do (
       call :CloseAndDelete "!idx!"
     ) else (
       if "!cpu!"=="4" call :CloseAndDelete "!idx!"
+    )
     )
   )
 )
