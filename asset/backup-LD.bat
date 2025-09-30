@@ -19,4 +19,4 @@ echo Da backup
 timeout /t 20
 call "%USERPROFILE%\Desktop\dow-code\test-something\asset\free-space.bat"
 timeout /t 60
-shutdown /r /t 0
+::shutdown /r /t 0
