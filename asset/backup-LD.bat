@@ -14,7 +14,7 @@ timeout /t 10
 
 cd "C:\LDPlayer\LDPlayer9\"
 
-   ldconsole.exe  restore --index 0 --file "%USERPROFILE%\Downloads\2690vip2.ldbk"
+   ldconsole.exe  restore --index 0 --file "%USERPROFILE%\Downloads\2690vip3.ldbk"
 echo Da backup
 timeout /t 20
 call "%USERPROFILE%\Desktop\dow-code\test-something\asset\free-space.bat"
