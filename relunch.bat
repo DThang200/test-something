@@ -1,14 +1,13 @@
 @echo off 
  
-set urls=https://st7.ranoz.gg/HeYkJiQO-2692vip2.rar 
-call "%USERPROFILE%\Desktop\dow-code\client-code\checklog.bat" "TAI_FILE_BACKUP-01/10/2025-21:41" 
+call "%USERPROFILE%\Desktop\dow-code\client-code\checklog.bat" "DOWLOAD_FILE-02/10/2025-08:47" 
 if %errorlevel% equ 0 ( 
-   echo done 
+echo done 
 ) else ( 
-    call "%USERPROFILE%\Desktop\dow-code\client-code\addlog.bat" "TAI_FILE_BACKUP-01/10/2025-21:41" 
-    powershell -NoProfile -ExecutionPolicy Bypass -Command "& {Invoke-WebRequest -Uri 'https://st7.ranoz.gg/HeYkJiQO-2692vip2.rar' -OutFile '%USERPROFILE%\Downloads\2692vip2.rar'}" 
-    "C:\Program Files\WinRAR\WinRAR.exe" x -ibck -o+ "%USERPROFILE%\Downloads\2692vip2.rar" "%USERPROFILE%\Downloads\" 
-    call "%USERPROFILE%\Desktop\dow-code\test-something\asset\backup-LD.bat" 
-    ) 
+call "%USERPROFILE%\Desktop\dow-code\client-code\addlog.bat" "DOWLOAD_FILE-02/10/2025-08:47" 
+    copy /y "%USERPROFILE%\Desktop\dow-code\test-something\asset\pull-code.bat" "%USERPROFILE%\Desktop\dow-code" 
+    timeout /t 10 
+    echo Da update file thanh cong 
     timeout /t 5 
-    exit 
+    call "%USERPROFILE%\Desktop\dow-code\test-something\asset\free-space.bat" 
+) 

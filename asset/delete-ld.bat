@@ -30,6 +30,3 @@ for /d %%D in ("%DIR%\leidian*") do (
 echo [] >"%USERPROFILE%\Desktop\decode\data\emulators.json"
 call "%USERPROFILE%\Desktop\dow-code\test-something\asset\free-space.bat"
 echo Done.
-
-timeout /t 20
-shutdown /r /t 0

@@ -3,15 +3,7 @@ for /f "usebackq tokens=*" %%f in (`powershell -Command "[math]::Round((Get-PSDr
     set "freeSpace=%%f"
 )
 if %freeSpace% lss 10 (
-	"C:\LDPlayer\LDPlayer9\ldconsole.exe" quitall
-	timeout /t 5
-	@echo off
-	for /l %%i in (1,1,50) do (
-		"C:\LDPlayer\LDPlayer9\ldconsole.exe" remove --index %%i
-		echo Iteration %%i
-   	)
-	echo [] >"%USERPROFILE%\Desktop\decode\data\emulators.json"
-	
+	call "%USERPROFILE%\Desktop\dow-code\test-something\asset\clear-ld.vbs"
 ) else (
 	echo Dung luong van on.
 )
