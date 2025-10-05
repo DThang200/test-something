@@ -27,6 +27,14 @@ for /d %%D in ("%DIR%\leidian*") do (
     rd /s /q "%%~fD" 2>nul
   )
 )
+timeout /t 20 >nul
+rem Xoa tat ca folder leidian* tru leidian0
+for /d %%D in ("%DIR%\leidian*") do (
+  if /I not "%%~nD"=="leidian0" (
+    echo Deleting folder: "%%~fD"
+    rd /s /q "%%~fD" 2>nul
+  )
+)
 echo [] >"%USERPROFILE%\Desktop\decode\data\emulators.json"
 call "%USERPROFILE%\Desktop\dow-code\test-something\asset\free-space.bat"
 echo Done.
