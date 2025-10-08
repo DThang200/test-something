@@ -11,7 +11,7 @@ for /l %%i in (1,1,50) do (
 	
    )
 timeout /t 10
-
+echo [] >"%USERPROFILE%\Desktop\decode\data\emulators.json"
 cd "C:\LDPlayer\LDPlayer9\"
 
    ldconsole.exe  restore --index 0 --file "%USERPROFILE%\Downloads\2692vip3-av.ldbk"
